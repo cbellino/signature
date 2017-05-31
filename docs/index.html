@@ -1,1 +1,96 @@
-coucou
+
+<style type="text/css">
+
+</style>
+
+
+  <script>
+    function showInput() {
+        var logo = "https://weare.sfeir.com/wp-content/uploads/2017/05/logo.png";
+
+        var ville ="";
+        var e = document.getElementById("ville").value;
+
+        if(e == "4"){
+            ville = "1 Avenue de l’Europe - 67300 Schiltigheim";
+        }else if(e == "3"){
+            ville = "2 Rue Drosbach - L-3372 Leudelange (LUXEMBOURG)";
+        }else if(e == "2"){
+            ville = "2 Rue Hegel (bâtiment le canal) - 59000 Lille";
+        }else{
+            ville ="48 rue Jacques Dulud - 92200 Neuilly sur Seine";
+        }
+
+        if(!document.getElementById("phone2").value){
+        document.getElementById('signature').innerHTML = 
+        '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 16px; "><a href="https://sfeir.com/" title="SFEIR"><img height="48%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value;+'</a></span></td></tr></table>';
+        }else{
+            document.getElementById('signature').innerHTML = 
+        '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 16px; "><a href="https://sfeir.com/" title="SFEIR"><img height="48%" src="https://weare.sfeir.com/wp-content/uploads/2017/05/logo.png" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value;+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value;+'</a></span></td></tr></table>';
+        }
+
+        document.getElementById("ls").src = logo;
+    }
+  </script>
+
+
+
+  <form id="form-sign">
+    <div class="fs-grp">
+        <label>Prénom</label>
+        <div class="fs-input">
+            <input type="text" name="prenom" id="prenom">
+        </div>
+    </div>
+
+
+    <div class="fs-grp">
+        <label>Nom</label>
+        <div class="fs-input">
+            <input type="text" name="message" id="nom">
+        </div>
+    </div>
+
+
+    <div class="fs-grp">
+        <label>Poste</label>
+        <div class="fs-input">
+            <input type="text" name="poste" id="poste">
+        </div>
+    </div>
+
+
+    <div class="fs-grp">
+        <label>Téléphone</label>
+        <div class="fs-input">
+            <input type="text" name="phone" id="phone">
+        </div>
+    </div>
+
+
+    <div class="fs-grp">
+        <label>Téléphone #2 (optionnel)</label>
+        <div class="fs-input">
+            <input type="text" name="phone2" id="phone2">
+        </div>
+    </div>
+
+    <div class="fs-grp">
+      <label>Adresse</label>
+        <div class="fs-input">
+            <select name="ville" id="ville">
+                <option value="1" selected="selected">Paris</option>
+                <option value="2">Lille</option>
+                <option value="3">Luxembourg</option>
+                <option value="4">Strasbourg</option>
+            </select>
+        </div>
+    </div>
+
+  </form>
+
+<div class="fs-btn">
+    <button type="submit" onclick="showInput();">Générer</button>
+</div>
+
+  <div  style="margin-left: 33%;"><span id='signature'></span></div>

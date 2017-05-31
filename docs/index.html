@@ -4,12 +4,107 @@
 <head>
   <title>Générateur de signature SFEIR</title>
     <style type="text/css">
+    #ap{
+        display: none;
+        color:#105394;
+        text-decoration: underline;
+        margin-bottom: 2%;
+    }
+    #signature{
+        width: 70%;
+        margin-left: 15%;
+    }
+    .sign{
+        margin-top: 2%;
+        width: 50%;
+        margin-left: 25%;
+        text-align: center; 
+    }
+    .maindiv{
+        width: 50%;
+        margin-left: 25%;
+        background-color: #e6e6e6;
+        text-align: center; 
+    }
+    .bann{
+        text-align: center;
+        min-height: 100px;
+        width: 55%;
+        text-align: right;
 
+    }
+    .bann img{
+        width: 30%;
+    }
+    .bann2{
+        color:#105394;
+        width: 45%;
+        float:right;
+        margin-top: 4%;
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+    #form-sign{
+        display: inline-block;
+        text-align: left;
+        min-width: 33%;
+        margin-top: 5%;
+    }
+    input{
+        border-bottom: 2px solid #e75112;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        min-width: 90%;
+    }
+    input:focus, select:focus{
+        outline: none;
+        border-top: 1px solid #e75112 !important;
+        border-right: 1px solid #e75112 !important;
+        border-left: 1px solid #e75112 !important;
+        border-bottom: 1px solid #e75112 !important;
+    }
+    label{
+        margin-bottom: 5px;
+        font-weight: bold;
+        color:#105394;
+    }
+    .fs-grp{
+        margin-bottom: 15%;
+        margin-left: 10%;
+    }
+    select{
+        min-width: 90%;
+    }
+    .fs-btn button{
+        outline: none;
+        padding: 1.8% 7%;
+        color:#fff;
+        background-color:#e75112      !important;
+        color:#FFF   !important;
+        font-size: 18px !important;
+        letter-spacing: 2px !important;
+        font-weight: bold   !important;
+        text-decoration: none !important;
+        border: 0 !important;
+    -webkit-box-shadow: 0px 4px 14px 0px rgba(50, 50, 50, 0.42);
+    -moz-box-shadow:    0px 4px 14px 0px rgba(50, 50, 50, 0.42);
+    box-shadow:         0px 4px 14px 0px rgba(50, 50, 50, 0.42);
+    margin-bottom: 5%;
+    }
+    .fs-btn button:hover{
+        outline: none;
+        background-color:  #105394 !important;
+        cursor: pointer ;
+        
+    }
     </style>
 
 
       <script>
         function showInput() {
+            document.getElementById('ap').style.display = 'block';
             var logo = "https://weare.sfeir.com/wp-content/uploads/2017/05/logo.png";
 
             var ville ="";
@@ -38,7 +133,9 @@
       </script>
 </head>
 <body>
-<div style="margin-left: 33%;">
+<div class="bann2">Signature</div>
+<div class="bann"><img src="https://weare.sfeir.com/wp-content/uploads/2017/05/logo.png"></div>
+<div class="maindiv">
 
       <form id="form-sign">
         <div class="fs-grp">
@@ -98,8 +195,13 @@
         <button type="submit" onclick="showInput();">Générer</button>
     </div>
 
-      <div><span id='signature'></span></div>
+      
 
  </div>
+
+<div class="sign">
+    <div id="ap">Aperçu de la signature :</div>
+    <div id="signature"></div>
+</div>
  </body>
  </html>

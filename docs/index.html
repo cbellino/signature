@@ -37,9 +37,6 @@
         text-decoration: underline;
         margin-bottom: 2%;
     }
-    #signature{
-        margin-bottom: 4%;
-    }
     #copy-sign{
         display: none;
         margin-top: 2%;
@@ -276,18 +273,18 @@
             if(!document.getElementById("phone2").value){
                 if(!document.getElementById("poste").value){
                     document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table><hr>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table>';
                 }else{
                     document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table><hr>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table>';
                 }
             }else{
                 if(!document.getElementById("poste").value){
                     document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table><hr>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table>';
                 }else{
                 document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table><hr>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table>';
                 }
             }
 
@@ -382,7 +379,7 @@
 <div class="sign">
     <div id="ap"><hr>Aperçu de la signature :</div>
     <div id="signature"></div>
-    <div id="copy-sign">
+    <div id="copy-sign"><hr style="margin-bottom: 4%;">
         <div class="steps">Etape 1 : </div>
         <div id="btn-cp"><button onclick="CopyToClipboard('signature')">Copier la signature</button></div>
         <div class="steps">Etape 2 :</div>

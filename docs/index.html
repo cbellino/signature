@@ -3,32 +3,72 @@
 
 <head>
   <title>Générateur de signature SFEIR</title>
+    <meta name="viewport" content="width=device-width" />
     <style type="text/css">
+    @media only screen and (min-width: 730px){
+        .maindiv{
+            width: 50%;
+            margin-left: 25%;
+        }
+        .sign{
+            width: 50%;
+        margin-left: 25%;
+        }
+    }
+    @media only screen and (min-width: 400px){
+        .steps{
+            float: left;
+        }
+        #gmailparam{
+            margin-left: 20%;
+        }
+        #form-sign{
+            display: inline-block;
+        }
+    }
+    @media only screen and (max-width: 399px){
+        .steps{
+            margin-bottom: 3%;
+        }
+    }
     #ap{
         display: none;
         color:#105394;
         text-decoration: underline;
         margin-bottom: 2%;
     }
+    #signature{
+        margin-bottom: 4%;
+    }
     #copy-sign{
         display: none;
         margin-top: 2%;
+        text-align: left;
+    }
+    hr{
+        display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #105394;
+    margin: 1em 0;
+    padding: 0; 
     }
     .copy-msg{
-        font-style: italic;
+        
         color: grey;
-        font-size: 13px;
+        font-size: 16px;
     }
-   
+    .steps{
+        color:#e75112;
+        font-size: 24px;
+        font-weight: bold;
+    }   
     .sign{
         margin-top: 2%;
-        width: 50%;
-        margin-left: 25%;
+        
         text-align: center; 
     }
     .maindiv{
-        width: 50%;
-        margin-left: 25%;
         background-color: #e6e6e6;
         text-align: center; 
     }
@@ -40,13 +80,12 @@
 
     }
     .bann img{
-        width: 15%;
+        width: 150px;
     }
     .bann2{
         color:#105394;
         text-align: center;
-        margin-bottom: 2%;
-        margin-top: 1%;
+        margin-bottom: 1%;
         font-size: 20px;
         font-weight: bold;
         /*width: 45%;
@@ -57,10 +96,9 @@
         font-weight: bold;*/
     }
     #form-sign{
-        display: inline-block;
-        text-align: left;
+            text-align: left;
         min-width: 33%;
-        margin-top: 5%;
+        margin-top: 2%;
     }
     input{
         border-bottom: 2px solid #e75112;
@@ -82,39 +120,136 @@
         color:#105394;
     }
     .fs-grp{
-        margin-bottom: 10%;
+        margin-bottom: 6%;
         margin-left: 10%;
     }
     .fs-input{
-        margin-top: 2%;
+        margin-top: 1%;
     }
     select{
         min-width: 90%;
     }
-    .fs-btn button, #btn-cp{
+    #btn-cp{
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    .fs-btn button, #btn-cp button{
         outline: none;
         padding: 1.8% 7%;
         color:#fff;
-        background-color:#e75112      !important;
-        color:#FFF   !important;
-        font-size: 18px !important;
-        letter-spacing: 2px !important;
-        font-weight: bold   !important;
-        text-decoration: none !important;
+        
+        color:#FFF  ;
+        font-size: 18px ;
+        letter-spacing: 2px ;
+        font-weight: bold  ;
+        text-decoration: none ;
         border: 0 !important;
     -webkit-box-shadow: 0px 4px 14px 0px rgba(50, 50, 50, 0.42);
     -moz-box-shadow:    0px 4px 14px 0px rgba(50, 50, 50, 0.42);
     box-shadow:         0px 4px 14px 0px rgba(50, 50, 50, 0.42);
-    
+    }
+    #btn-cp button{
+        background-color:#105394;
+    }
+    #btn-cp button:hover{
+        background-color:#e75112;
     }
     .fs-btn button{
-        margin-bottom: 5%;
+        margin-bottom: 3%;
+        background-color:#e75112;
     }
-    .fs-btn button:hover, #btn-cp:hover{
+    .fs-btn button:hover{
+        background-color:#105394;
+    }
+    .fs-btn button:hover, #btn-cp button:hover{
         outline: none;
-        background-color:  #105394 !important;
         cursor: pointer ;
         
+    }
+    /* Style the Image Used to Trigger the Modal */
+    #gmailparam {
+        cursor: pointer;
+        text-align: center;
+        margin-top: -4%;
+        color:grey;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (Image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation - Zoom in the Modal */
+    .modal-content, #caption { 
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .modal-content {
+            width: 100%;
+        }
     }
     </style>
 
@@ -141,18 +276,18 @@
             if(!document.getElementById("phone2").value){
                 if(!document.getElementById("poste").value){
                     document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table><hr>';
                 }else{
                     document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a></span></td></tr></table><hr>';
                 }
             }else{
                 if(!document.getElementById("poste").value){
                     document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table><hr>';
                 }else{
                 document.getElementById('signature').innerHTML = 
-            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table>';
+            '<table width="100%" cellpadding="0" cellspacing="0"><tr><td  align="left" valign="top" style="padding-right: 10px; "><a href="https://sfeir.com/" title="SFEIR"><img height="38%" id="ls" alt="Logo" style=" padding: 0; border: 0;" /></a></td><td  width="100%" align="left" valign="top" style="padding: 8px 0 8px 0; font-family: Arial; font-size: 10px;line-height: 12px; color: grey; "><span style="color: #105394;font-weight: bold;">'+document.getElementById("prenom").value+' '+document.getElementById("nom").value+'</span> - <span style="color: #e75112;">'+document.getElementById("poste").value+'</span><br /><span>'+ville+'</span><br /><span style="font-family: Trebuchet MS, Sans-Serif;font-weight: bold;margin-top:  2px;"><a href="tel:'+document.getElementById("phone").value+'">'+document.getElementById("phone").value+'</a> - <a href="tel:'+document.getElementById("phone2").value+'">'+document.getElementById("phone2").value+'</a></span></td></tr></table><hr>';
                 }
             }
 
@@ -171,7 +306,10 @@
                  window.getSelection().addRange(range);
                  document.execCommand("Copy");
                  alert("Signature copiée !") 
-            }}
+            }
+        }
+
+            
       </script>
 </head>
 <body>
@@ -242,14 +380,51 @@
  </div>
 
 <div class="sign">
-    <div id="ap">Aperçu de la signature :</div>
+    <div id="ap"><hr>Aperçu de la signature :</div>
     <div id="signature"></div>
     <div id="copy-sign">
-        <button id="btn-cp" onclick="CopyToClipboard('signature')">Copier la signature</button>
-        <br />
-        <span class="copy-msg">(copier la signature et coller là dans l'espace adéquat dans votre profil Gmail)</span>
-    </div>
+        <div class="steps">Etape 1 : </div>
+        <div id="btn-cp"><button onclick="CopyToClipboard('signature')">Copier la signature</button></div>
+        <div class="steps">Etape 2 :</div>
+        <div id="btn-cp"><a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank"><button>Coller la signature</button></a></div>
+        <div id="gmailparam">(pour gmail)<br />PARAMETRES > GENERAL > SIGNATURE</div>
 
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+              <!-- The Close Button -->
+              <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+              <!-- Modal Content (The Image) -->
+              <img class="modal-content" id="imggmail">
+
+              <!-- Modal Caption (Image Text) -->
+              <div id="caption"></div>
+        </div>
+
+
+    </div>
+<script>
+    var modal = document.getElementById('myModal');
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            
+            var modalImg = document.getElementById("imggmail");
+            var captionText = document.getElementById("caption");
+            document.getElementById('gmailparam').onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = "https://weare.sfeir.com/wp-content/uploads/2017/06/signsfeir.jpg";
+                captionText.innerHTML = "PARAMETRES > GENERAL > SIGNATURE";
+            }
+
+
+            // When the user clicks on <span> (x), close the modal
+            document.getElementsByClassName("close")[0].onclick = function() { 
+              modal.style.display = "none";
+            }
+</script>
  </body>
 </div>
  </html>

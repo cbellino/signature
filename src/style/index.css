@@ -1,21 +1,301 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+@media only screen and (min-width: 730px) {
+  .maindiv {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sign {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .steps {
+    float: left;
+  }
+
+  #gmailparam {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #form-sign {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .steps {
+    margin-bottom: 3%;
+  }
+}
+
+#ap {
+  color: #105394;
+  text-decoration: underline;
+  margin-bottom: 2%;
+  font-family: 'Roboto', sans-serif;
+}
+
+#copy-sign {
+  margin-top: 2%;
+  text-align: left;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #105394;
+  margin: 1em 0;
   padding: 0;
-  margin: 0;
-  background: #FAFAFA;
-  font-family: 'Helvetica Neue', arial, sans-serif;
-  font-weight: 400;
-  color: #444;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
+.copy-msg {
+
+  color: grey;
+  font-size: 16px;
 }
 
-#app {
+.steps {
+  color: #105394;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sign {
+  margin-top: 2%;
+
+  text-align: center;
+}
+
+.maindiv {
+  background-color: #e6e6e6;
+  text-align: center;
+}
+
+.bann {
+  text-align: center;
+  /* min-height: 100px;
+        width: 55%;
+        text-align: right;*/
+}
+
+.bann img {
+  width: 150px;
+}
+
+.bann2 {
+  color: #105394;
+  text-align: center;
+  margin-bottom: 1%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  /*width: 45%;
+        float:right;
+        margin-top: 4%;
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: bold;*/
+}
+
+#form-sign {
+  text-align: left;
+  min-width: 60%;
+  margin-top: 2%;
+}
+
+input {
+  border-bottom: 2px solid #e75112;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  min-width: 90%;
+  height: 20px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-top: 1px solid #e75112 !important;
+  border-right: 1px solid #e75112 !important;
+  border-left: 1px solid #e75112 !important;
+  border-bottom: 1px solid #e75112 !important;
+}
+
+label {
+  font-size: 15px;
+  color: #105394;
+  font-family: 'Roboto', sans-serif;
+}
+
+.fs-grp {
+  margin-bottom: 6%;
+  margin-left: 10%;
+}
+
+.fs-input {
+  margin-top: 1%;
+}
+
+select {
+  min-width: 90%;
+}
+
+#btn-cp {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.fs-btn button,
+#btn-cp button {
+  outline: none;
+  padding: 1.8% 7%;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 0 !important;
+  -webkit-box-shadow: 0px 4px 14px 0px rgba(50, 50, 50, 0.42);
+  -moz-box-shadow: 0px 4px 14px 0px rgba(50, 50, 50, 0.42);
+  box-shadow: 0px 4px 14px 0px rgba(50, 50, 50, 0.42);
+}
+
+#btn-cp button {
+  background-color: #e75112;
+}
+
+#btn-cp button:hover {
+  background-color: #105394;
+}
+
+.fs-btn button {
+  margin-bottom: 3%;
+  background-color: #e75112;
+}
+
+.fs-btn button:hover {
+  background-color: #105394;
+}
+
+.fs-btn button:hover,
+#btn-cp button:hover {
+  outline: none;
+  cursor: pointer;
+
+}
+
+/* Style the Image Used to Trigger the Modal */
+#gmailparam {
+  cursor: pointer;
+  text-align: center;
+  margin-top: -4%;
+  color: grey;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
   height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
 }
